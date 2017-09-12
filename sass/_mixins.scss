@@ -1,0 +1,4 @@
+@mixin move ($moveX, $moxeY){
+    transform: translateX($moveX) translateY($moxeY);
+
+}

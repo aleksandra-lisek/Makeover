@@ -1,0 +1,54 @@
+@import "mixins";
+@import "var";
+
+html{
+    font-size: 10px;
+}
+
+.face{
+    width: 20rem;
+    height: 20rem;
+    background-color: $skinColor;
+    border-radius: 50%;
+}
+
+.eyes{
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+
+    justify-content: space-between;
+    width: 12rem;
+    height: inherit;
+
+
+}
+.eye{
+    width: 3.75rem;
+    height: 4rem;
+    background-color: #FFFFFF;
+    border-top-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 7rem;
+    left: 3rem;
+
+    .iris{
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $eyeColor;
+        border-radius: 50%;
+        @include move(0.75rem, 0.75rem);
+
+        .pupil{
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: #000000;
+            border-radius: 50%;
+            @include move(50%, 50%);
+        }
+
+    }
+
+}
