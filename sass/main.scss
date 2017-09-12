@@ -6,10 +6,11 @@ html{
 }
 
 .face{
-    width: 20rem;
-    height: 20rem;
+    width: $faceWidth;
+    height: $faceHeight;
     background-color: $skinColor;
     border-radius: 50%;
+    display: flex;
 }
 
 .eyes{
@@ -24,22 +25,23 @@ html{
 
 }
 .eye{
-    width: 3.75rem;
+    width: $eyeWidth;
     height: 4rem;
     background-color: #FFFFFF;
-    border-top-left-radius: 180px;
-    border-bottom-right-radius: 180px;
-    transform: rotate(45deg);
+     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    // border: 2px solid #000000;
     position: relative;
     top: 7rem;
-    left: 3rem;
+    left: 3.75rem;
+    @include eyesShadow(rgba(0,0,0,0.38));
 
     .iris{
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: $eyeColor;
+        width: 2.45rem;
+        height: 2.45rem;
+        @include radiousGradient ($eyeColorInner, $eyeColorOuter);
         border-radius: 50%;
         @include move(0.75rem, 0.75rem);
+        border: 0.3px solid darken($eyeColorOuter, 40%);
 
         .pupil{
             width: 1.25rem;
@@ -51,4 +53,22 @@ html{
 
     }
 
+}
+
+.nose{
+    position: relative;
+			top: 53%;
+			left: 50%;
+            // @include move(calc($faceWidth/2 + $noseWidth/2), calc($faceHeight/2 + $noseHeight/2));
+			height: $noseHeight;
+			width: $noseWidth;
+			// margin-left: calc(-#{$face__nose--width} / #{$face__spacing});
+			border: 2px solid #000;
+			border-color: transparent transparent #000 #000;
+			border-radius: 0 10px 10px;
+			-webkit-transform: rotate(9deg);
+			-moz-transform: rotate(9deg);
+			-o-transform: rotate(9deg);
+			-ms-transform: rotate(9deg);
+			transform: rotate(9deg);
 }
