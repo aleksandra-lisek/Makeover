@@ -5,20 +5,46 @@ html{
     font-size: 10px;
 }
 
+
+.hair{
+    width: 21rem;
+    height: 30rem;
+    background-color: $hairColor;
+    display: flex;
+    justify-content: center;
+    border-radius: 40% 40% 0% 0%;
+
+
+}
+
 .face{
     width: $faceWidth;
     height: $faceHeight;
     background-color: $skinColor;
     border-radius: 50%;
     display: flex;
+    transform: translateY(3rem);
+    display: flex;
+    &:after{
+        content: "";
+        width: 16rem;
+        height: 6rem;
+
+        border-radius: 40% 40% 40% 40%;
+        transform: translateX(-0.6rem);
+        transform: translateY(-1rem);
+        background-color: $hairColor;
+        // z-index: 10;
+
+    }
 }
 
 .eyes{
     display: flex;
     flex-flow: row;
     position: absolute;
-
     justify-content: space-between;
+    left: -1rem;
     width: 12rem;
     height: inherit;
 
@@ -58,11 +84,11 @@ html{
 .nose{
     position: relative;
 			top: 53%;
-			left: 50%;
-            // @include move(calc($faceWidth/2 + $noseWidth/2), calc($faceHeight/2 + $noseHeight/2));
+			left: 47%;
+
 			height: $noseHeight;
 			width: $noseWidth;
-			// margin-left: calc(-#{$face__nose--width} / #{$face__spacing});
+			
 			border: 2px solid #000;
 			border-color: transparent transparent #000 #000;
 			border-radius: 0 10px 10px;
