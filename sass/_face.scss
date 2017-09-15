@@ -1,0 +1,110 @@
+.head{
+    grid-area: head;
+}
+
+.hair {
+    width: 21rem;
+    height: 30rem;
+    background-color: $hairColor;
+    display: flex;
+    justify-content: center;
+    border-radius: 40% 40% 0 0;
+}
+
+.face {
+    width: $faceWidth;
+    height: $faceHeight;
+    background-color: $skinColor;
+    border-radius: 50%;
+    display: flex;
+    transform:translate(3rem, -28rem);
+    display: flex;
+
+}
+
+.fringe {
+    content: "";
+    width: 16rem;
+    height: 6rem;
+    border-radius: 40% 40% 40% 40%;
+    // transform: translateX(-2rem);
+    left: -1.5rem;
+    transform: translate(0rem, 1.5rem);
+    background-color: $hairColor;
+    z-index: 200;
+}
+
+.eyes {
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    justify-content: space-between;
+    left: -2rem;
+    width: 12rem;
+    height: inherit;
+}
+
+.eye {
+    width: $eyeWidth;
+    height: 3.5rem;
+    background-color: #FFFFFF;
+    border-radius: 60% 60% 40% 40%/ 50% 50% 50% 50%;
+    position: relative;
+    top: 8rem;
+    left: 3.75rem;
+    @include eyesShadow(#000);
+
+    .iris {
+        width: 2.45rem;
+        height: 2.45rem;
+        @include radiousGradient ($eyeColorInner, $eyeColorOuter);
+        border-radius: 50%;
+        @include move(0.75rem, 0.5rem);
+        border: 0.3px solid darken($eyeColorOuter, 40%);
+
+        .pupil {
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: #000000;
+            border-radius: 50%;
+            @include move(50%, 50%);
+        }
+    }
+}
+
+.nose {
+    position: relative;
+    top: 53%;
+    left: 47%;
+    height: $noseHeight;
+    width: $noseWidth;
+    border: 2px solid $noseColor;
+    border-color: transparent transparent $noseColor $noseColor;
+    border-radius: 0 10px 10px;
+    -webkit-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -o-transform: rotate(9deg);
+    -ms-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+
+.mouth {
+    position: relative;
+    z-index: 20;
+    transform: translate(5.5rem, 16.5rem);
+    width: 4.75rem;
+    height: 2rem;
+    border-radius: 0 0 100px 100px;
+    background: #424B54;
+    overflow: hidden;
+
+    .tounge {
+        transform: translate(1.5rem, 1rem);
+        width: 30px;
+        height: 20px;
+        background: #F6828C;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+    }
+}
