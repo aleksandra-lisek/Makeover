@@ -1,3 +1,56 @@
 .inputs{
     grid-area: inputs;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-areas:
+    "txt_fringe"
+    "fringe"
+    "txt_hair"
+    "hair"
+    "txt_eyes"
+    "eyes"
+    "txt_skin"
+    "skin";
+
+    span{
+        font-size: 0.9rem;
+    }
+}
+
+
+.fringe-input{
+    grid-area: fringe;
+    .txt-fringe{
+        grid-area: txt_fringe;
+    }
+
+}
+
+.hair-color-input{
+    grid-area: hair;
+
+    .txt-hair{
+        grid-area: txt_fringe;
+    }
+
+}
+
+.eyes-color-input{
+    grid-area: eyes;
+
+    .txt-eyes{
+        grid-area: txt_eyes;
+    }
+
+}
+
+.skin-color-input{
+    grid-area: skin;
+
+    .txt-skin{
+        grid-area: txt_skin;
+    }
+
 }

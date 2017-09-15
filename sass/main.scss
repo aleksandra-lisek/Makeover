@@ -5,17 +5,22 @@
 
 html {
     font-size: 10px;
+    height: 100vh;
 }
 
 .title{
     grid-area: title;
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 .grid{
+    height: 100vh;
     display: grid;
-    grid-template-columns: 40%, 60%;
-    grid-template-rows: 20%, 80%;
+    grid-template-columns: 3fr 1fr 6fr;
+    grid-template-rows: 1fr 1fr;
+    // grid-gap: 1rem;
     grid-template-areas:
-   "title title "
-   "inputs head ";
+   "title title title "
+   "inputs . head ";
 }
