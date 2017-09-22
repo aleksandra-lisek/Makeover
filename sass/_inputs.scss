@@ -1,0 +1,24 @@
+.inputs{
+    grid-area: inputs;
+    height: 60vh;
+    // grid-template-areas:
+    // "txt_fringe"
+    // "fringe"
+    // "txt_hair"
+    // "hair"
+    // "txt_eyes"
+    // "eyes"
+    // "txt_skin"
+    // "skin";
+
+    label{
+        font-size: 2rem;
+
+    }
+}
+
+// .{
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr 2fr;
+// }
