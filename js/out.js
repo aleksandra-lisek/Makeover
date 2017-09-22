@@ -71,7 +71,39 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log('tralalalal');
+    var fringe = document.querySelector('.fringe');
+    var eye = document.querySelector('.iris');
+    var skin = document.querySelector('.face');
+    var hair = document.querySelector('.hair');
+    console.log(fringe);
+
+    var inputFringe = document.querySelector('.fringe-change');
+    var inputEye = document.querySelector('.eyes-color-change');
+    var inputSkin = document.querySelector('.skin-color-change');
+    var inputHair = document.querySelector('.hair-color-change');
+    // console.log(inputs);
+
+
+    function handleUpdate() {
+        var suffix = this.dataset.sizing || '';
+        fringe.style.height = '' + this.value + suffix;
+        console.log(this.name);
+        console.log(this.value);
+    }
+
+    function handleUpdateColor() {
+        var suffix = this.dataset.sizing || '';
+        hair.style.backgroundColor = '' + this.value;
+        // hair.style.backgroundColor =this.value ;
+        console.log(this.name);
+        console.log(this.value);
+    }
+    // input.addEventListener('input', handleUpdate));
+    inputFringe.addEventListener('input', handleUpdate);
+    // inputEye.addEventListener('input', handleUpdateColor);
+    // inputSkin.addEventListener('input', handleUpdate()));
+    inputHair.addEventListener('input', handleUpdate);
+    // inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 });
 
 /***/ })
