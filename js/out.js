@@ -92,17 +92,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleUpdateColor() {
-        var suffix = this.dataset.sizing || '';
         hair.style.backgroundColor = '' + this.value;
-        // hair.style.backgroundColor =this.value ;
+        fringe.style.backgroundColor = '' + this.value;
+        console.log(this.name);
+        console.log(this.value);
+    }
+    function handleUpdateColorSkin() {
+        skin.style.backgroundColor = '' + this.value;
+
         console.log(this.name);
         console.log(this.value);
     }
     // input.addEventListener('input', handleUpdate));
     inputFringe.addEventListener('input', handleUpdate);
     // inputEye.addEventListener('input', handleUpdateColor);
-    // inputSkin.addEventListener('input', handleUpdate()));
-    inputHair.addEventListener('input', handleUpdate);
+    inputSkin.addEventListener('input', handleUpdateColorSkin);
+    inputHair.addEventListener('input', handleUpdateColor);
     // inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 });
 
