@@ -5,7 +5,8 @@
 
 html {
     font-size: 10px;
-    font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+
     height: 100vh;
 }
 
@@ -22,6 +23,7 @@ html {
     grid-template-rows: 1fr 1fr;
     // grid-gap: 1rem;
     grid-template-areas:
-   "title title title "
+   // " . . . "
    "inputs . head ";
+   padding: 25px;
 }
